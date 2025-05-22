@@ -1,0 +1,95 @@
+/* assets/css/admin.css */
+
+.cui-loader {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 20px;
+}
+
+.cui-spinner {
+	border: 4px solid rgba(0, 0, 0, 0.1);
+	border-left: 4px solid #0073aa;
+	/* WordPress primary color */
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	animation: cui-spin 1s linear infinite;
+}
+
+@keyframes cui-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.cui-notices .notice {
+	margin-top: 15px;
+}
+
+.tab-content {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	padding: 20px;
+	margin-top: -1px;
+	/* Align with tabs */
+	border-top-left-radius: 0;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.nav-tab-wrapper {
+	margin-top: 20px;
+	border-bottom: 1px solid #c3c4c7;
+	padding-bottom: 0;
+}
+
+.nav-tab {
+	padding: 8px 12px;
+	border: 1px solid #c3c4c7;
+	border-bottom: none;
+	background: #f0f0f1;
+	color: #555d66;
+	text-decoration: none;
+	margin-right: 5px;
+	border-radius: 3px 3px 0 0;
+	display: inline-block;
+}
+
+.nav-tab-active {
+	background: #fff;
+	border-bottom: 1px solid #fff;
+	color: #000;
+}
+
+/* Red box around progress (as in screenshot) */
+#cui-import-progress {
+	border: 1px solid red;
+	padding: 15px;
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#cui-import-progress>div:first-child {
+	flex-grow: 1;
+}
+
+.cui-in-progress-row {
+	background-color: #fff9c4 !important;
+	/* Light yellow to highlight in-progress imports */
+}
+
+/* Styles for error/success messages */
+#cui-import-status-message.notice-error {
+	border-left-color: #dc3232;
+}
+
+#cui-import-status-message.notice-success {
+	border-left-color: #46b450;
+}
