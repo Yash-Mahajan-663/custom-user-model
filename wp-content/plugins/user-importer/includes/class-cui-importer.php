@@ -155,11 +155,11 @@ class CUI_Importer
 
 			// 👇 If non-AJAX (standard page flow)
 			$_SESSION['import_error'] = $errors[0]; // Or use transient
-			wp_redirect(admin_url('admin.php?page=your-import-page'));
+			wp_redirect(admin_url('admin.php?page=custom-user-importer'));
 			exit;
 		} else {
 			$_SESSION['import_success'] = "$success_count users imported successfully.";
-			wp_redirect(admin_url('admin.php?page=your-import-page'));
+			wp_redirect(admin_url('admin.php?page=custom-user-importer'));
 			exit;
 		}
 
